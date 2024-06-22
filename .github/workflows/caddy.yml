@@ -100,6 +100,7 @@ jobs:
           --with github.com/mholt/caddy-l4 \
           --with github.com/caddy-dns/duckdns \
           --with github.com/mholt/caddy-events-exec \
+          --with github.com/caddyserver/transform-encoder \
           --with github.com/WeidiDeng/caddy-cloudflare-ip \
           --with github.com/caddyserver/forwardproxy=github.com/klzgrad/forwardproxy@naive \
           --with github.com/imgk/caddy-trojan \
