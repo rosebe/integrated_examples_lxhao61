@@ -12,5 +12,7 @@
           --with github.com/mholt/caddy-webdav \
 ```
 --with github.com/caddyserver/forwardproxy=github.com/sagernet/forwardproxy@latest
+
 --with github.com/xcaddyplugins/caddy-trusted-cloudfront
+
 --with github.com/WingLim/caddy-webhook
