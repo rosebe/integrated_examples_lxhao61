@@ -15,4 +15,6 @@
 
 --with github.com/xcaddyplugins/caddy-trusted-cloudfront
 
+--with github.com/caddyserver/transform-encoder
+
 --with github.com/WingLim/caddy-webhook
