@@ -34,26 +34,39 @@
   },
   "outbounds": [
     {
-      "protocol": "vless",
+      "protocol": "trojan",
       "settings": {
-        "vnext": [
+        "servers": [
           {
-            "address": "2.2.2.2", //修改为使用本应用的域名或自己服务端的 IP
+            "address": "2.2.2.2", //修改为使用本应用的 IPv4 对应域名或自己服务端的 IPv4
             "port": 443,
-            "users": [
-              {
-                "id": "af7d5cf8-442d-4bb3-8a76-eb367178781d", //修改为服务端配置的 UUID
-                "encryption": "none"
-              }
-            ]
+            "password": "diy2020" //修改为服务端配置的密码
           }
         ]
       },
       "streamSettings": {
         "network": "xhttp",
+        "xhttpSettings": {
+          "mode": "auto", //可根据实际情况修改来保证连通性
+          "path": "/TSpLdG9k", //修改为服务端配置的路径
+          "downloadSettings": {
+            "address": "2.2.2.2", //修改为使用本应用的 IPv6 对应域名或自己服务端的 IPv6
+            "port": 443,
+            "network": "xhttp",
+            "xhttpSettings": {
+              "path": "/TSpLdG9k" //必须与上路径一致
+            },
+            "security": "tls",
+            "tlsSettings": {
+              "serverName": "h3.xx.yy", //修改为使用本应用的域名。（对应 address 使用 IP 后必须配置，否则可删除。）
+              "alpn": ["h2"], //若服务端支持 HTTP/3 传输其值可改为 h3
+              "fingerprint": "chrome" //模拟 TLS 指纹，可任一 chrome、firefox、safari、ios、edge、qq、random、randomized 选项配置。
+            }
+          }
+        },
         "security": "reality",
         "realitySettings": {
-          "serverName": "xx.yy", //修改为服务端配置的域名
+          "serverName": "h3.xx.yy", //修改为服务端配置的域名
           "publicKey": "SU8ZzrdS1DETJj0y3u4xFkPTCcf6HwJCBbbjWCoMMHw", //修改为服务端私钥的对应公钥
           "shortId": "", //修改为服务端 shortIds 配置之一
           "spiderX": "", //选填，爬虫初始路径与参数，建议每个客户端不同。
@@ -68,3 +81,6 @@
     }
   ]
 }
+//备注：
+//1、IPv4/IPv6 对应上行/下行可根据实际调整。
+//2、两应用对应上行/下行可根据实际调整。
