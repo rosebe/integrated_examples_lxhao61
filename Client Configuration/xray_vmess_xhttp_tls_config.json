@@ -53,11 +53,12 @@
       "streamSettings": {
         "network": "xhttp",
         "xhttpSettings": {
+          "mode": "auto", //可根据实际情况修改来保证连通性
           "path": "/VMSpdG9k" //修改为服务端配置的路径
         },
         "security": "tls",
         "tlsSettings": {
-          "serverName": "xx.yy", //修改为使用本应用的域名。（仅 address 使用服务端的 IP 必须配置，否则可删除。）
+          "serverName": "xx.yy", //修改为使用本应用的域名。（address 使用 IP 后必须配置，否则可删除。）
           "alpn": ["h2"], //若服务端（含使用 CDN 流量中转的服务器）支持 HTTP/3 传输其值可改为 h3
           "fingerprint": "chrome" //模拟 TLS 指纹，可任一 chrome、firefox、safari、ios、edge、qq、random、randomized 选项配置。
         }
@@ -126,6 +127,7 @@
       "streamSettings": {
         "network": "xhttp",
         "xhttpSettings": {
+          "mode": "auto", //可根据实际情况修改来保证连通性
           "path": "/VMSpdG9k", //修改为服务端配置的路径
           "downloadSettings": {
             "address": "2.2.2.2", //修改为使用本应用的直连域名或自己服务端的 IP
@@ -136,7 +138,7 @@
             },
             "security": "tls",
             "tlsSettings": {
-              "serverName": "h3.xx.yy", //修改为使用本应用的直连域名。（仅 address 使用服务端的 IP 必须配置，否则可删除。）
+              "serverName": "h3.xx.yy", //修改为使用本应用的直连域名。（对应 address 使用 IP 后必须配置，否则可删除。）
               "alpn": ["h2"], //若服务端（非 CDN 流量中转服务器）支持 HTTP/3 传输其值可改为 h3
               "fingerprint": "chrome" //模拟 TLS 指纹，可任一 chrome、firefox、safari、ios、edge、qq、random、randomized 选项配置。
             }
@@ -144,7 +146,7 @@
         },
         "security": "tls",
         "tlsSettings": {
-          "serverName": "zh.xx.yy", //修改为使用本应用的 CDN 流量中转域名。（仅 address 使用服务端的 IP 必须配置，否则可删除。）
+          "serverName": "zh.xx.yy", //修改为使用本应用的 CDN 流量中转域名。（对应 address 使用 IP 后必须配置，否则可删除。）
           "alpn": ["h2"], //若 CDN 流量中转服务器支持 HTTP/3 传输其值可改为 h3
           "fingerprint": "chrome" //模拟 TLS 指纹，可任一 chrome、firefox、safari、ios、edge、qq、random、randomized 选项配置。
         }

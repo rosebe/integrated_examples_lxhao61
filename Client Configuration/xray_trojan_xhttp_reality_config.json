@@ -48,7 +48,7 @@
         "network": "xhttp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "xx.yy", //修改为使用本应用的域名
+          "serverName": "xx.yy", //修改为服务端配置的域名
           "publicKey": "XZImaWSkHZeFYMkLBVr8lywIhYg9uZw8pTYhOb8Axl4", //修改为服务端私钥的对应公钥
           "shortId": "", //修改为服务端 shortIds 配置之一
           "spiderX": "", //选填，爬虫初始路径与参数，建议每个客户端不同。
