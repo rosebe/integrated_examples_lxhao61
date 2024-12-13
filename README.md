@@ -80,7 +80,7 @@
 4. Caddy 插件单一应用简记：N=NaiveProxy(Caddy+forwardproxy)、T=Trojan-Go(Caddy+caddy-trojan)。
 5. 目前 Caddy 从 Let's Encrypt 或 ZeroSSL 申请的免费 TLS 证书默认为 ECC 证书。
 6. 基于安全原因，WebSocket 应用目前仅推荐使用 CDN 进行流量中转。
-7. 若 CDN 流量中转不支持 WebSocket/HTTPUpgrade 通过，可使用 XHTTP 应用来解决。
+7. 若 CDN 流量中转不支持 WebSocket/HTTPUpgrade、gRPC 通过，可使用 XHTTP 应用来解决。
 8. 若使用不可信的 CDN 进行流量中转，推荐使用自带加密的 VMess 配置；否则推荐使用轻量的 VLESS 或 Trojan 配置。
 9. 综合应用配置示例中非 RAW（原 TCP） 应用怎么删、换、增，请参考‘服务端单一/简单应用配置示例’中对应示例。
 10. 流量伪装与防探测网站可由其它 WEB 应用软件实现，其支持反代应用（反代 WebSocket/HTTPUpgrade、XHTTP、gRPC 及 H2C）与支持回落应用（提供 H2C server 及 HTTP/1.1 server 的 WEB 服务）等取决于自身，其配置自行参考 Caddy 或 Nginx 对应示例。
