@@ -43,4 +43,3 @@
 11、本示例 K 为选配、与 H 共用 VLESS+XHTTP 配置，仅服务端支持双 IP（IPv4/IPv6） 推荐配置，使用它与 H 组合可实现 XHTTP 应用上下行分离。
 
 12、配置1：使用 Local Loopback 连接，且启用了 PROXY protocol。配置2：使用 UDS 连接（对应 HTTP/3 server、Shadowsocks+gRPC+TLS 除外），且启用了 PROXY protocol。
-col。
